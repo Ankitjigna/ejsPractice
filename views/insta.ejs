@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>insta page</title>
+    <link rel="stylesheet" type="text/css" href="\public\insta.css">
 </head>
 <body>
-    <h1>this account belongs to @<%= username %></h1>
+    <h1 class="h1" style="background-color: yellowgreen; color: black;">this account belongs to @<%= username %></h1>
+   <div class="hover" onmouseover="style.backgroundColor='darkblue';">
     <button>follow</button>
     <button>like</button>
+   </div>
 
     
     <h3>liked by:</h3>
-    <ul>
+    <ul class="hover" onmouseleave="style.backgroundColor='yellow';">
         <% for(let name of likes){%>
             <li><%=name%></li>
         <%  } %>

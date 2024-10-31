@@ -30,3 +30,11 @@ app.get("/ig/:username",(req, res)=>{
     let {username}=req.params;
     res.render("insta.ejs",{ username , likes} );
 });
+
+app.get("/emp/:name",(req, res)=>{
+    let {name}=req.params;
+    const empData=require("./data.json");
+    const data=empData[name];
+    console.log(data);
+    res.render("emp.ejs",{ data } );
+});
